@@ -6,7 +6,7 @@ create table Grade
 	STUID varchar (30) not null ,   
 	Score int not null,
 	Class_name varchar (20) not null,
-	Srudent_name varchar (6) not null,
+	Student_name varchar (6) not null,
 	Teacher_name varchar (6) not null,
 	Syear varchar (20) not null,
 	Term int not null,

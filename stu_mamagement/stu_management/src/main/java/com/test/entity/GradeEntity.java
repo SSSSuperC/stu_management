@@ -8,6 +8,7 @@ public class GradeEntity
     private int Score;
     private String Class_name;
     private String Student_name;
+    private String Teacher_name;
     private String Syear;
     private int Term;
     private String CID;
@@ -18,7 +19,7 @@ public class GradeEntity
     String STUID
     ,int Score
     ,String Class_name
-    , String Student_name
+    , String Student_name,String Teacher_name
     , String Syear
     , int Term
     , String CID
@@ -29,6 +30,7 @@ public class GradeEntity
         this.STUID = STUID;
         this.Score = Score;
         this.Class_name = Class_name;
+        this.Teacher_name =  Teacher_name;
         this.Student_name = Student_name;
         this.Syear = Syear;
         this.Term = Term;
@@ -41,6 +43,13 @@ public class GradeEntity
 
     }
 
+    public String getTeacher_name() {
+        return Teacher_name;
+    }
+
+    public void setTeacher_name(String teacher_name) {
+        Teacher_name = teacher_name;
+    }
 
     public int getPass() {
         return Pass;
@@ -131,6 +140,7 @@ public class GradeEntity
                 ", Score=" + Score +
                 ", Class_name='" + Class_name + '\'' +
                 ", Student_name='" + Student_name + '\'' +
+                ", Teacher_name='" + Teacher_name + '\'' +
                 ", Syear='" + Syear + '\'' +
                 ", Term=" + Term +
                 ", CID='" + CID + '\'' +

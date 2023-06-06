@@ -1,18 +1,19 @@
 package com.test.entity;
 
-public class Operators
+public class OperatorsEntity
 {
     private String AID;
     private String Admin_name;
     private int Admin_privilege;
 
-    public Operators() {
+    public OperatorsEntity()
+    {
     }
 
-    public Operators(String AID, String admin_name, int admin_privilege) {
+    public OperatorsEntity(String AID, String admin_name, int admin_privilege) {
         this.AID = AID;
-        Admin_name = admin_name;
-        Admin_privilege = admin_privilege;
+        this.Admin_name = admin_name;
+        this.Admin_privilege = admin_privilege;
     }
 
     public String getAID() {

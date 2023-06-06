@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mapper.TestMapper">
+    <update id="updateCourse">
+        UPDATE Course
+        <set>
+            <if test= "Course_name != null">
+                Course_name = #{Course_name},
+            </if>
+            <if test= "Teacher_name != null">
+                Teacher_name = #{Teacher_name},
+            </if>
+            <if test = "TID != null">
+                TID = #{TID},
+            </if>
+            <if test="Student_num != null">
+                Students_num = #{Students_num}
+            </if>
+        </set>>
+        <where>
+            CID = #{CID}
+        </where>
+    </update>
+    <update id="updateGrade">
+        UPDATE Grade
+        <set>
+            <if test= "Grade != null">
+                Grade = #{Grade},
+            </if>
+            <if test="GPA != null">
+                GPA = #{GPA},
+            </if>
+            <if test="STUID != null">
+                STUID = #{STUID},
+            </if>
+            <if test="Score != null">
+                Score = #{Score},
+            </if>
+            <if test="Class_name != null">
+                Class_name = #{Class_name},
+            </if>
+            <if test="Student_name != null">
+                Student_name = #{Student_name},
+            </if>
+            <if test="Teacher_name != null">
+                Teacher_name = #{Teacher_name},
+            </if>
+            <if test="Syear != null">
+                Syear = #{Syear},
+            </if>
+            <if test="Trem != null">
+                Term = #{Term},
+            </if>
+            <if test="Pass != null">
+                Pass = #{Pass}
+            </if>
+        </set>
+        <where>
+            CID = #{CID}
+        </where>
+    </update>
+    <update id="updateStudent">
+        UPDATE Student SET Student_name = #{Student_name},Address = #{Address},Tel = #{Tel},Dorm = #{Dorm},sex = #{sex},IDclass = #{IDclass},IDnum = #{IDnum},Stu_year = #{Stu_year},Major = #{Major},Class_name = #{Class_name} WHERE STUID = #{STUID}
+    </update>
+    <update id="updateOperators">
+        UPDATE Operators
+        <set>
+        <if test= "Admin_name != null">
+            Admin_name = #{Admin_name},
+        </if>
+
+        <if test="Admin_privilege != null">
+            Admin_privilege = #{Admin_privilege}
+        </if>
+        </set>
+        <where>
+            AID = #{AID}
+        </where>
+    </update>
+</mapper>
